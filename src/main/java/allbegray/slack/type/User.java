@@ -6,16 +6,26 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class User {
 
 	protected String id;
+	protected String team_id;
 	protected String name;
 	protected Boolean deleted;
 	protected String color;
+	protected String real_name;
+	protected String tz;
+	protected String tz_label;
+	protected Integer tz_offset;
 	protected Profile profile;
 	protected Boolean is_admin;
 	protected Boolean is_owner;
 	protected Boolean is_primary_owner;
 	protected Boolean is_restricted;
 	protected Boolean is_ultra_restricted;
+	protected Boolean is_bot;
+	protected Boolean is_stranger;
+	protected Integer updated;
+	protected Boolean is_app_user;
 	protected Boolean has_2fa;
+	protected String locale;
 	protected String two_factor_type;
 	protected Boolean has_files;
 
@@ -25,6 +35,14 @@ public class User {
 
 	public void setId(String id) {
 		this.id = id;
+	}
+
+	public String getTeam_id() {
+		return team_id;
+	}
+
+	public void setTeam_id(String team_id) {
+		this.team_id = team_id;
 	}
 
 	public String getName() {
@@ -49,6 +67,38 @@ public class User {
 
 	public void setColor(String color) {
 		this.color = color;
+	}
+
+	public String getReal_name() {
+		return real_name;
+	}
+
+	public void setReal_name(String real_name) {
+		this.real_name = real_name;
+	}
+
+	public String getTz() {
+		return tz;
+	}
+
+	public void setTz(String tz) {
+		this.tz = tz;
+	}
+
+	public String getTz_label() {
+		return tz_label;
+	}
+
+	public void setTz_label(String tz_label) {
+		this.tz_label = tz_label;
+	}
+
+	public Integer getTz_offset() {
+		return tz_offset;
+	}
+
+	public void setTz_offset(Integer tz_offset) {
+		this.tz_offset = tz_offset;
 	}
 
 	public Profile getProfile() {
@@ -99,12 +149,52 @@ public class User {
 		this.is_ultra_restricted = is_ultra_restricted;
 	}
 
+	public Boolean getIs_bot() {
+		return is_bot;
+	}
+
+	public void setIs_bot(Boolean is_bot) {
+		this.is_bot = is_bot;
+	}
+
+	public Boolean getIs_stranger() {
+		return is_stranger;
+	}
+
+	public void setIs_stranger(Boolean is_stranger) {
+		this.is_stranger = is_stranger;
+	}
+
+	public Integer getUpdated() {
+		return updated;
+	}
+
+	public void setUpdated(Integer updated) {
+		this.updated = updated;
+	}
+
+	public Boolean getIs_app_user() {
+		return is_app_user;
+	}
+
+	public void setIs_app_user(Boolean is_app_user) {
+		this.is_app_user = is_app_user;
+	}
+
 	public Boolean getHas_2fa() {
 		return has_2fa;
 	}
 
 	public void setHas_2fa(Boolean has_2fa) {
 		this.has_2fa = has_2fa;
+	}
+
+	public String getLocale() {
+		return locale;
+	}
+
+	public void setLocale(String locale) {
+		this.locale = locale;
 	}
 
 	public String getTwo_factor_type() {
@@ -125,10 +215,30 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", deleted=" + deleted + ", color=" + color + ", profile="
-				+ profile + ", is_admin=" + is_admin + ", is_owner=" + is_owner + ", is_primary_owner="
-				+ is_primary_owner + ", is_restricted=" + is_restricted + ", is_ultra_restricted=" + is_ultra_restricted
-				+ ", has_2fa=" + has_2fa + ", two_factor_type=" + two_factor_type + ", has_files=" + has_files + "]";
+		return "User [" +
+				"id='" + id + '\'' +
+				", team_id='" + team_id + '\'' +
+				", name='" + name + '\'' +
+				", deleted=" + deleted +
+				", color='" + color + '\'' +
+				", real_name='" + real_name + '\'' +
+				", tz='" + tz + '\'' +
+				", tz_label='" + tz_label + '\'' +
+				", tz_offset=" + tz_offset +
+				", profile=" + profile +
+				", is_admin=" + is_admin +
+				", is_owner=" + is_owner +
+				", is_primary_owner=" + is_primary_owner +
+				", is_restricted=" + is_restricted +
+				", is_ultra_restricted=" + is_ultra_restricted +
+				", is_bot=" + is_bot +
+				", is_stranger=" + is_stranger +
+				", updated=" + updated +
+				", is_app_user=" + is_app_user +
+				", has_2fa=" + has_2fa +
+				", locale='" + locale + '\'' +
+				", two_factor_type='" + two_factor_type + '\'' +
+				", has_files=" + has_files +
+				']';
 	}
-
 }
